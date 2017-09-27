@@ -1,0 +1,23 @@
+{
+  "name": "watchandcode",
+  "version": "1.0.0",
+  "description": "This is a eslint setup for JS in ES6 Sept@2017",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-defaults": "^9.0.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marc-OLiver Gern",
+  "license": "MIT"
+}

@@ -1,9 +1,12 @@
 // reference file: ...
 
-const todoList = {
+var todoList = {
   todos: [],
   displayTodos: function() {
-    console.log('My Todos:', this.todos);
+    console.log('My Todos:');
+    for (var i = 0; i < this.todos.length; i++) {
+        console.log(this.todos[i].todoText);
+      }
   },
   addTodo: function(todoTextNew1) {
     this.todos.push({ //this is the object that will be created when we add a todo
@@ -27,6 +30,7 @@ const todoList = {
   }
 };
 
-console.log(todoList.addTodo('Hello'));
+console.log(todoList.addTodo('Hello1'));
+console.log(todoList.addTodo('Hello2'));
 console.log(todoList.changeTodo(0, 'Second'));
 console.log(todoList.toggleCompleted(0)); //this will change it to true
