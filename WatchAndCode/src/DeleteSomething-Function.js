@@ -1,4 +1,4 @@
-const todos = ['item 0', 'item 1', 'item 2'];
+const todos = ['item 0', 'item 1', 'item 2']
 
 function displayTodos () {
   console.log('My Todos:', todos)

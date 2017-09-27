@@ -33,9 +33,38 @@ const todoList = {
     var todo = this.todos[position]
     todo.completed = !todo.completed // change value of completed with BANG operator
     this.displayTodos()
+  },
+  toggleAll: function () {
+    var totalTodos = this.todos.length // record total of todos
+    var completedTodos = 0 // record total of completed todos
+
+    // count the number of completed todos
+    for (var i = 0; i < totalTodos; i++) {
+      if (this.todos[i].completed === true) {
+        completedTodos++
+      }
+    }
+    // case 1: if everything is true, make everything false
+    if (completedTodos === totalTodos) {
+      for (i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = false
+      }
+      // case 2: otherwise, make everything true
+    } else {
+      for (i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = false
+      }
+    }
+    this.displayTodos()
   }
 }
 
 console.log(todoList.addTodo('Hello1'))
 console.log(todoList.addTodo('Hello2'))
-console.log(todoList.toggleCompleted(0)) // this will change it to true
+console.log(todoList.addTodo('Hello3'))
+console.log(todoList.toggleCompleted(0)) // this will change item 0 to true
+console.log(todoList.toggleCompleted(1)) // this will change it 1 true
+console.log(todoList.toggleAll()) // this will uncheck all
+console.log(todoList.toggleCompleted(0))
+console.log(todoList.toggleAll()) // this will uncheck all
+console.log(todoList.displayTodos()) // this will show all items in list
