@@ -1,6 +1,0 @@
-{
-  "extends": "eslint-config-airbnb",
-  "rules": {
-    "jsx-a11y/href-no-hash": "off"
-    }
-}
