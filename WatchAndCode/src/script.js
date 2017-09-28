@@ -1,4 +1,4 @@
-var todoList = {
+const todoList = {
   todos: [],
   displayTodos: function () {
     if (this.todos.length === 0) { // check if list is empty
@@ -35,6 +35,7 @@ var todoList = {
     this.displayTodos()
   },
   toggleAll: function () {
+    // debugger;
     var totalTodos = this.todos.length // record total of todos
     var completedTodos = 0 // record total of completed todos
 
@@ -46,25 +47,37 @@ var todoList = {
     }
     // case 1: if everything is true, make everything false
     if (completedTodos === totalTodos) {
-      for (var i = 0; i < totalTodos; i++) {
+      for (i = 0; i < totalTodos; i++) {
         this.todos[i].completed = false
       }
       // case 2: otherwise, make everything true
     } else {
-      for (var i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = false
+      for (i = 0; i < totalTodos; i++) {
+        this.todos[i].completed = true
       }
     }
     this.displayTodos()
   }
 }
 
-console.log(todoList.addTodo('Hello1'))
-console.log(todoList.addTodo('Hello2'))
-console.log(todoList.addTodo('Hello3'))
-// console.log(todoList.toggleCompleted(0)) // this will change item 0 to true
-// console.log(todoList.toggleCompleted(1)) // this will change it 1 true
-// console.log(todoList.toggleAll()) // this will uncheck all
-// console.log(todoList.toggleCompleted(0))
-console.log(todoList.toggleAll()) // this will uncheck all
-console.log(todoList.displayTodos()) // this will show all items in list
+// combines all handlers (as methods) and click events
+var handlers = {
+  displayTodos: function () {
+    todoList.displayTodos()
+  },
+  toggleAll: function () {
+    todoList.toggleAll()
+  },
+  addTodo: function () {
+    var addTodoTextInput = document.getElementById('addTodoTextInput')
+    todoList.addTodo(addTodoTextInput.value) // value is what users typed
+    addTodoTextInput.value = ''
+  },
+  changeTodo: function () {
+    var changeTodoPositionInput = document.getElementById('changeTodoPositionInput')
+    var changeTodoTextInput = document.getElementById('changeTodoTextInput')
+    todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value)
+    changeTodoPositionInput.value = ''
+    changeTodoTextInput.value = ''
+  }
+}
