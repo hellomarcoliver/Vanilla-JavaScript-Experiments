@@ -65,9 +65,6 @@ var handlers = {
   displayTodos: function () {
     todoList.displayTodos()
   },
-  toggleAll: function () {
-    todoList.toggleAll()
-  },
   addTodo: function () {
     var addTodoTextInput = document.getElementById('addTodoTextInput')
     todoList.addTodo(addTodoTextInput.value) // value is what users typed
@@ -79,5 +76,18 @@ var handlers = {
     todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value)
     changeTodoPositionInput.value = ''
     changeTodoTextInput.value = ''
+  },
+  deleteTodo: function () {
+    var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput') // grab input first
+    todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber) // pass number into deleteTodo object
+    deleteTodoPositionInput.value = '' // clear input
+  },
+  toggleCompleted: function () {
+    var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput')
+    todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber)
+    toggleCompletedPositionInput.value = ''
+  },
+  toggleAll: function () {
+    todoList.toggleAll()
   }
 }
