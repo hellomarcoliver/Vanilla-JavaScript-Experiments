@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="javascript" class="gr__todomvc_com">
+
+<head>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="index.css">
+  <!-- <script src="script.js"></script> -->
+</head>
+
+<body class="learn-bar">
+  <section class="todoapp">
+    <header class="header">
+  <h1>Test (Functional)</h1>
+</header>
+  <div style="padding: 10px">
+    <!-- <button onclick="handlers.displayTodos()">Display Todos</button> -->
+    <button onclick="handlers.toggleAll()">Toggle All Todos</button>
+  </div>
+
+  <div style="padding: 10px">
+    <button onclick="handlers.addTodo()">Add Todo</button>
+    <input class="todo-input" id="addTodoTextInput" type="text" />
+  </div>
+
+  <div style="padding: 10px">
+    <button onclick="handlers.changeTodo()">Change Todo</button>
+    <input class="todo-input" id="changeTodoPositionInput" type="number" />
+    <input class="todo-input" id="changeTodoTextInput" type="text" />
+  </div>
+
+  <div style="padding: 10px">
+    <button onclick="handlers.deleteTodo()">Delete Todo</button>
+    <input class="todo-input" id="deleteTodoPositionInput" type="number" />
+  </div>
+
+  <div style="padding: 10px">
+    <button onclick="handlers.toggleCompleted()">Toggle Completed</button>
+    <input class="todo-input" id="toggleCompletedPositionInput" type="number" />
+  </div>
+
+  <ul>
+
+  </ul>
+</section>
+  <script src="script.js"></script>
+</body>
+
+</html>
