@@ -28,17 +28,13 @@ const todoList = {
         completedTodos++
       }
     })
-    // case 1: if everything is true, make everything false
-    if (completedTodos === totalTodos) {
-      this.todos.forEach(function (todo) {
+    this.todos.forEach(function (todo) {
+      if (completedTodos === totalTodos) {
         todo.completed = false
-      })
-      // case 2: otherwise, make everything true
-    } else {
-      this.todos.forEach(function (todo) {
+      } else {
         todo.completed = true
-      })
-    }
+      }
+    })
   }
 }
 
@@ -79,9 +75,8 @@ var view = {
   displayTodos: function () {
     var todosUl = document.querySelector('ul')
     todosUl.innerHTML = ''
-    for (var i = 0; i < todoList.todos.length; i++) {
+    todoList.todos.forEach(function (todo, position) {
       var todoLi = document.createElement('li')
-      var todo = todoList.todos[i] // destructuring
       var todoTextWithCompletion = ''
       if (todo.completed === true) {
         todoTextWithCompletion = '(x) ' + todo.todoText
@@ -89,11 +84,11 @@ var view = {
         todoTextWithCompletion = '( ) ' + todo.todoText
       }
       // append the DOM
-      todoLi.id = i // give a button a unique id
+      todoLi.id = position // give a button a unique id
       todoLi.textContent = todoTextWithCompletion
       todoLi.appendChild(this.createDeleteButton())
       todosUl.appendChild(todoLi)
-    }
+    }, this)
   },
   createDeleteButton: function () {
     var deleteButton = document.createElement('button')
