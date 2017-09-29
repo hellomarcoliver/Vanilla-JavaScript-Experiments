@@ -22,23 +22,22 @@ const todoList = {
     // debugger;
     var totalTodos = this.todos.length // record total of todos
     var completedTodos = 0 // record total of completed todos
-
     // count the number of completed todos
-    for (var i = 0; i < totalTodos; i++) {
-      if (this.todos[i].completed === true) {
+    this.todos.forEach(function (todo) {
+      if (todo.completed === true) {
         completedTodos++
       }
-    }
+    })
     // case 1: if everything is true, make everything false
     if (completedTodos === totalTodos) {
-      for (i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = false
-      }
+      this.todos.forEach(function (todo) {
+        todo.completed = false
+      })
       // case 2: otherwise, make everything true
     } else {
-      for (i = 0; i < totalTodos; i++) {
-        this.todos[i].completed = true
-      }
+      this.todos.forEach(function (todo) {
+        todo.completed = true
+      })
     }
   }
 }
@@ -111,7 +110,7 @@ var view = {
       var elementClicked = event.target
       // check if elementClicked is a deleteButton
       if (elementClicked.className === 'deleteButton') {
-        handlers.deleteTodo(parseInt(elementClicked.parentNode.id //change string to number
+        handlers.deleteTodo(parseInt(elementClicked.parentNode.id)) // change string to number
       }
     })
   }
