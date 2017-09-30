@@ -1,4 +1,6 @@
 // runs on https://github.com/tapio/live-server
+// cheatsheet: https://github.com/gordonmzhu/cheatsheet-js
+
 
 const todoList = {
   todos: [],
@@ -73,6 +75,7 @@ var handlers = {
 // shows stuff
 var view = {
   displayTodos: function () {
+    // all this is equal to the view object (excepyt call back forEach...)
     var todosUl = document.querySelector('ul')
     todosUl.innerHTML = ''
     todoList.todos.forEach(function (todo, position) {
@@ -88,7 +91,7 @@ var view = {
       todoLi.textContent = todoTextWithCompletion
       todoLi.appendChild(this.createDeleteButton())
       todosUl.appendChild(todoLi)
-    }, this)
+    }, this) // need this because the callback function is not on the view object (its not a method)
   },
   createDeleteButton: function () {
     var deleteButton = document.createElement('button')
