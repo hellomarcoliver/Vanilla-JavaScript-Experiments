@@ -1,7 +1,6 @@
 // runs on https://github.com/tapio/live-server
 // cheatsheet: https://github.com/gordonmzhu/cheatsheet-js
 
-
 const todoList = {
   todos: [],
   addTodo: function (todoText) {
