@@ -1,4 +1,4 @@
-// Object Decorator Pattern
+// L5 – Object Decorator Pattern
 // ... code reuse
 // don't repeat yourself
 
