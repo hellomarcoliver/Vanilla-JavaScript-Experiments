@@ -4,7 +4,7 @@
 
 
 // these are instances of the car class
-var amy = carlike(1); 
+var amy = Car(1); 
 move(amy);
-var ben = carlike(9); 
+var ben = Car(9); 
 move(ben)
