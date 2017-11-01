@@ -11,11 +11,8 @@ Car.prototype.move = function() {
   this.loc++;
 };
 
-
-
 amy.move();
 ben.move();
 
 console.log(Car.prototype.constructor); // [Function: Car]
 console.log(amy.constructor); // [Function: Car]
-console.log(amy)
