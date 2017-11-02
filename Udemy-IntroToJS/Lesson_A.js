@@ -1,7 +1,3 @@
-// alert("Hello");
-
-console.log("hiya friend!");
-
-for (var i = 0; i < 10; i++) {
-    console.log(i);
-}  
+var name = "Marc";
+name[1];
+console.log(name[0]);
