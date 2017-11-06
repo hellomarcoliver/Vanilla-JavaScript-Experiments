@@ -57,7 +57,6 @@ if (solved) {
 }
 
 // Programming Quiz: Ice Cream (3-6)
-
 var flavor = "chocolate";
 var vessel = "hand";
 var toppings = "sprinkles";
