@@ -31,12 +31,12 @@
 // console.log(one());
 
 // Practice /////////////////////////////
-const SPEND_THRESHOLD = 400;
+const SPEND_THRESHOLD = 77;
 const TAX_RATE = 0.08;
 const PHONE_PRICE = 99.99;
 const ACCESSORY_PRICE = 9.99;
 
-var bank_balance = 403.91;
+var bank_balance = 77.91;
 var amount = 0;
 
 // add TAX to price
