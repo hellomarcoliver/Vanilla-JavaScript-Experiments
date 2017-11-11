@@ -31,12 +31,11 @@
 // console.log(one());
 
 // Practice /////////////////////////////
-const SPEND_THRESHOLD = 77;
-const TAX_RATE = 0.08;
-const PHONE_PRICE = 99.99;
-const ACCESSORY_PRICE = 9.99;
-
-var bank_balance = 77.91;
+const SPEND_THRESHOLD = 100;
+const TAX_RATE = 0.1;
+const PHONE_PRICE = 50;
+const ACCESSORY_PRICE = 10;
+var bank_balance = 150;
 var amount = 0;
 
 // add TAX to price
@@ -67,5 +66,23 @@ console.log("Your purchase price is " + formatAmount(amount));
 if (amount > bank_balance) {
     console.log("You cannot afford this purchase.")
 } else if (amount < bank_balance) {
-    console.log("Great. Let get it."); // this wont work because the code above keep adding
+    console.log("Great. Let\'s get it."); // this wont work because the code above keep adding
 }
+
+// ANOTHER TEST 1
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    // Your code below this line
+    result = "My " + myNoun + " is " + myAdjective + " and it can " + myVerb + " super " + myAdverb;
+  
+    // Your code above this line
+    return result;
+  }
+  
+  // Change the words here to test your function
+  wordBlanks("dog", "big", "ran", "quickly");
+  
+
+
+
+
