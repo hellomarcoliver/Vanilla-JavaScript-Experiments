@@ -55,4 +55,15 @@ var d = null;
 console.log(d === true);
 
 
+//CLOSURES /////////////////////////////////////////////
+function makeAdder(x) {
+    function add(y) {
+        return y + x;
+    };
+    return add;
+};
+var plusOne = makeAdder(1); //the function reference is plusOne
+var plusTen = makeAdder(10);
+console.log(plusOne(3)); // adds 3 (its inner y)
+console.log(plusTen(13));
 
