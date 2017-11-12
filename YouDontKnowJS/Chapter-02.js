@@ -55,7 +55,7 @@ var d = null;
 console.log(d === true);
 
 
-//CLOSURES /////////////////////////////////////////////
+//CLOSURES 1 /////////////////////////////////////////////
 function makeAdder(x) {
     function add(y) {
         return y + x;
@@ -66,4 +66,53 @@ var plusOne = makeAdder(1); //the function reference is plusOne
 var plusTen = makeAdder(10);
 console.log(plusOne(3)); // adds 3 (its inner y)
 console.log(plusTen(13));
+console.log(makeAdder(1)(3)); // basically what we did above
 
+//CLOSURES 2 /////////////////////////////////////////////
+function greet(whatToSay) {
+    return function(name) {
+        console.log(whatToSay + ' ' + name);
+    }
+}
+var sayHi = greet('Hi');
+sayHi('Toni');
+
+//UDEMY 1 /////////////////////////////////////////////
+function buildFunctions() {
+    var arr = [];
+for (var i = 0; i < 3; i++) {    
+    arr.push(function() {
+            console.log(i);   
+        });
+}
+return arr;
+}
+
+var fs = buildFunctions();
+fs[0]();
+fs[1]();
+fs[2]();
+
+
+//UDEMY 2 /////////////////////////////////////////////
+function buildFunctions2() {
+
+var arr = [];
+
+for (var i = 0; i < 3; i++) {
+    arr.push(
+        (function(j) {
+            return function() {
+                console.log(j);   
+            }
+        }(i))
+    )
+}
+return arr;
+}
+
+var fs2 = buildFunctions2();
+
+fs2[0]();
+fs2[1]();
+fs2[2]();
