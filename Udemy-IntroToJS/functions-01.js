@@ -21,6 +21,7 @@
 // }
 // isPrime(12);
 
+////// Build A Triangle with a function declaration
 function makeLine(length) {
     var line = "";
     for (var j = 1; j <= length; j++) {
@@ -28,4 +29,22 @@ function makeLine(length) {
     }
     return line + "\n";
   }
-  console.log(makeLine(3));
+
+function buildTriangle(width) {
+    var row = "";
+    for(var i = 1; i <= width; i++) {
+        row += makeLine(i)
+    }
+    return row;
+}
+console.log(buildTriangle(10));
+
+
+////// count numbers up
+function count(num) {
+    for (var i = 1; i <= num; i++) {
+        console.log(i);
+    }
+    return num
+}
+count(6);
