@@ -26,3 +26,27 @@ function movies(messageFunction, name) {
   movies(function displayFavorite(movieName) {
     console.log("My favorite movie is " + movieName);
   }, "Finding Nemo");
+
+
+ /*
+ * Programming Quiz: Inline Functions (5-6)
+ */
+
+// don't change this code
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+
+// your code goes here
+// call the emotions function here and pass in an
+// inline function expression
+// SOLUTION 1
+// emotions("happy", function (laughs) {
+//     var message = "";
+//     for (var i = 0; i < laughs; i++) {
+//       message += "ha";
+// }
+//     return message + "!";
+// });
+// SOLUTION 2
+emotions("happy", function(n) {return "ha".repeat(n) + "!";});
