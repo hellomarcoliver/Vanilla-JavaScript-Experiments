@@ -1,5 +1,5 @@
 
-////// function expression catSays
+//////////// function expression catSays
 var catSays = function(max) {
     var catMessage = "";
     for (var i = 0; i < max; i++) {
@@ -17,7 +17,7 @@ var catSays = function(max) {
 console.log(helloCat(catSays));
 
 
-////// pass a function into another function inline
+//////////// pass a function into another function inline
 function movies(messageFunction, name) {
     messageFunction(name);
   }
@@ -28,18 +28,12 @@ function movies(messageFunction, name) {
   }, "Finding Nemo");
 
 
- /*
- * Programming Quiz: Inline Functions (5-6)
- */
 
-// don't change this code
+
+//////////// Programming Quiz: Inline Functions (5-6)
 function emotions(myString, myFunc) {
     console.log("I am " + myString + ", " + myFunc(2));
 }
-
-// your code goes here
-// call the emotions function here and pass in an
-// inline function expression
 // SOLUTION 1
 // emotions("happy", function (laughs) {
 //     var message = "";
