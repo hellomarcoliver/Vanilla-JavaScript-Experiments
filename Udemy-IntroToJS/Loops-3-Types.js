@@ -1,5 +1,5 @@
 //////////// for loop
-var donuts1 = ["jelly donut", "chocolate donut", "glazed donut"];
+var donuts1 = ["jelly donut 1", "chocolate donut 1", "glazed donut 1"];
 for (var i = 0; i <= donuts1.length; i = i + 2) {
     console.log(donuts1[i]);
     if (i === 2) {
