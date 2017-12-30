@@ -32,6 +32,7 @@ var umbrella = {
         facebookProfile.friends --;
     }
 };
+
 facebookProfile.postMessage("Yo");
 facebookProfile.messages.forEach(function(value, index, array) {
     console.log(array[index]);
