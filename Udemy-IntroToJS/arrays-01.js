@@ -54,8 +54,8 @@ for (var i = 0, n = numbers.length; i < n; i++) {
 console.log(numbers);
 
 //////////// 3rd solution
-for (var i = 0, i <= numbers.length; i++) {
-    for (var j = 0, j <= numbers[i].length; j++) {
+for (var i = 0; i < numbers.length; i++) {
+    for (var j = 0; j < numbers[i].length; j++) {
         numbers[i][j] = numbers[i][j] % 2 === 0 ? "even" : "odd";
     }
 }
